@@ -65,3 +65,9 @@ python vault.py
 - You need to use the vault token from the Sink file when talking to the Vault agent as a proxy. This is demonstrated via the Vault CLI, CURL, and the python hvac library.
 - When using the Vault CLI or CURL I can use either the VAULT_ADDR environment variable or the VAULT_AGENT_ADDR environment variable for the URL of the Vault Agent.
 - When using the Python hvac library, I use the address of the Vault agent in the client initiation.
+
+## References
+
+- [Quick Overview on Vault Agent](https://learn.hashicorp.com/tutorials/vault/secure-introduction#vault-agent)
+- [Vault Agent Caching](https://learn.hashicorp.com/tutorials/vault/agent-caching)
+- [Vault Agent Template Example Configuration](https://www.vaultproject.io/docs/agent/template#example-configuration)
