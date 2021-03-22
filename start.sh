@@ -23,6 +23,6 @@ vault kv put secret/test foo=bar
 # Read the role_id and create a wrapped secret_id and store them in the proper location for the vault agent
 vault read -field=role_id auth/approle/role/agent/role-id > ./webblog_role_id
 # Uncomment below to use secret_id directly
-# vault write -field=secret_id -f auth/approle/role/agent/secret-id > ./webblog_wrapped_secret_id
+vault write -field=secret_id -f auth/approle/role/agent/secret-id > ./webblog_wrapped_secret_id
 # Uncomment below to use the wrapped secret_id
-vault write -field=wrapping_token -wrap-ttl=200s -f auth/approle/role/agent/secret-id > ./webblog_wrapped_secret_id
+# vault write -field=wrapping_token -wrap-ttl=200s -f auth/approle/role/agent/secret-id > ./webblog_wrapped_secret_id

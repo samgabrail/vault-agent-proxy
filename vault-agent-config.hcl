@@ -8,19 +8,19 @@ auto_auth {
   method "approle" {
     mount_path = "auth/approle"
     // Uncomment below to use Unwrapped Secret-id
-      config = {
-        role_id_file_path = "./webblog_role_id"
-        secret_id_file_path = "./webblog_wrapped_secret_id"
-        remove_secret_id_file_after_reading = false
-        secret_id_response_wrapping_path = "auth/approle/role/agent/secret-id"
-    }
-    namespace = "admin"
-    // Uncomment below to use Secret-id directly
     //   config = {
     //     role_id_file_path = "./webblog_role_id"
     //     secret_id_file_path = "./webblog_wrapped_secret_id"
     //     remove_secret_id_file_after_reading = false
+    //     secret_id_response_wrapping_path = "auth/approle/role/agent/secret-id"
     // }
+    namespace = "admin"
+    // Uncomment below to use Secret-id directly
+      config = {
+        role_id_file_path = "./webblog_role_id"
+        secret_id_file_path = "./webblog_wrapped_secret_id"
+        remove_secret_id_file_after_reading = false
+    }
   }
 
   sink "file" {
