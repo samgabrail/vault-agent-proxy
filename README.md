@@ -2,7 +2,9 @@
 
 ## Vault Server in HCP
 
-Start an Enterprise grade [HCP Vault cluster](https://portal.cloud.hashicorp.com/)
+Start an Enterprise [HCP Vault cluster](https://portal.cloud.hashicorp.com/)
+
+Note: you don't need to run an enterprise Vault server for this demo. However, please don't use Vault server in dev mode. I've found that if you don't specify the vault token, the Vault agent will automatically use the root token from the Vault server running in dev mode.
 
 ## Vault Admin Token
 
@@ -22,7 +24,7 @@ Update the `vault-agent-config.hcl` file with your Vault's address. Example:
 
 ```hcl
 vault {
-  address = "https://vault-cluster.vault.11eb622f-9648-4edd-ad91-0242ac11000c.aws.hashicorp.cloud:8200"
+  address = "https://vault-cluster.vault.11eb622f-9648-4edd-x532-0242ac11000c.aws.hashicorp.cloud:8200"
 }
 ```
 
@@ -61,3 +63,5 @@ python vault.py
 - The Vault agent can cache requests. These requests are for tokens and leased secrets. An example of a leased secret is a dynamic secret. KV secrets are non-leased secrets and won't get cached.
 - Be careful when using Dev mode with the Vault server. I've found that if you don't specify the vault token, the Vault agent will automatically use the root token from the Vault server.
 - You need to use the vault token from the Sink file when talking to the Vault agent as a proxy. This is demonstrated via the Vault CLI, CURL, and the python hvac library.
+- When using the Vault CLI or CURL I can use either the VAULT_ADDR environment variable or the VAULT_AGENT_ADDR environment variable for the URL of the Vault Agent.
+- When using the Python hvac library, I use the address of the Vault agent in the client initiation.

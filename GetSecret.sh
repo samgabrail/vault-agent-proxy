@@ -9,10 +9,12 @@ done < vault_token
 echo "This is the Vault Address used: " $VAULT_ADDR
 echo "This is the Vault Agent Address used: " $VAULT_AGENT_ADDR
 echo "This is the Vault token: " $VAULT_TOKEN
-# vault token lookup
+vault token lookup
 
+# Retrieve the secret using the Vault CLI
 vault kv get -namespace=admin secret/test
 
+# Retrieve the secret using CURL
 curl \
     --header "X-Vault-Token: $VAULT_TOKEN" \
     $VAULT_AGENT_ADDR/v1/admin/secret/data/test | jq
