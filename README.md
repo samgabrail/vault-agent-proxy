@@ -70,4 +70,5 @@ python vault.py
 
 - [Quick Overview on Vault Agent](https://learn.hashicorp.com/tutorials/vault/secure-introduction#vault-agent)
 - [Vault Agent Caching](https://learn.hashicorp.com/tutorials/vault/agent-caching)
+- [Vault Agent Caching Video](https://www.youtube.com/watch?v=PNtRk3wRtWM&t=933s)
 - [Vault Agent Template Example Configuration](https://www.vaultproject.io/docs/agent/template#example-configuration)
