@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # export VAULT_ADDR=http://127.0.0.1:8201
 export VAULT_ADDR=https://vault-cluster.vault.11eb622f-9648-4edd-ad91-0242ac11000c.aws.hashicorp.cloud:8200
 export VAULT_NAMESPACE=admin
