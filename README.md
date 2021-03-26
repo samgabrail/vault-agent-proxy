@@ -40,6 +40,7 @@ vault agent -config vault-agent-config.hcl
 sudo cp vault-agent.service /etc/systemd/system/
 
 ### Run the the service
+sudo systemctl enable vault-agent
 sudo systemctl restart vault-agent
 
 
