@@ -36,6 +36,13 @@ In a third tab run:
 vault agent -config vault-agent-config.hcl
 ```
 
+### Copy the systemd vault-agent.service file to this folder: /etc/systemd/system/
+sudo cp vault-agent.service /etc/systemd/system/
+
+### Run the the service
+sudo systemctl restart vault-agent
+
+
 ## Retrieve the secret via Vault Agent
 
 Now let's see how to retrieve secrets via the Vault agent without talking directly to Vault.
@@ -52,6 +59,9 @@ Run the following in a separate tab:
 ```shell
 python vault.py
 ```
+
+
+
 
 ## My Observations
 
