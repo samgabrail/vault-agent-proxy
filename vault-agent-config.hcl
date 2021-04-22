@@ -11,7 +11,7 @@ auto_auth {
       config = {
         role_id_file_path = "/home/sam/vault-agent-proxy/webblog_role_id"
         secret_id_file_path = "/home/sam/vault-agent-proxy/webblog_wrapped_secret_id"
-        remove_secret_id_file_after_reading = false
+        remove_secret_id_file_after_reading = true
         secret_id_response_wrapping_path = "auth/approle/role/agent/secret-id"
     }
     namespace = "admin"

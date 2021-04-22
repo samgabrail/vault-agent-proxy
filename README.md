@@ -28,13 +28,9 @@ vault {
 }
 ```
 
-## Run the Vault Agent
+## Run the Vault Agent with Systemd
 
-In a third tab run: 
-
-```shell
-vault agent -config vault-agent-config.hcl
-```
+Make sure to use absolute file paths when using Systemd to manage the vault-agent
 
 ### Copy the systemd vault-agent.service file to this folder: /etc/systemd/system/
 sudo cp vault-agent.service /etc/systemd/system/
