@@ -33,12 +33,13 @@ vault {
 Make sure to use absolute file paths when using Systemd to manage the vault-agent
 
 ### Copy the systemd vault-agent.service file to this folder: /etc/systemd/system/
+```shell
 sudo cp vault-agent.service /etc/systemd/system/
 
 ### Run the the service
 sudo systemctl enable vault-agent
 sudo systemctl restart vault-agent
-
+```
 
 ## Retrieve the secret via Vault Agent
 
